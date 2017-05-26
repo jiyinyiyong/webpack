@@ -28,6 +28,7 @@ if(module.hot) {
 				},
 				onErrored: function(data) {
 					console.warn("Ignored an error while updating module " + data.moduleId + " (" + data.type + ")");
+					console.error(data.error);
 				}
 			}).then(function(renewedModules) {
 				if(!upToDate()) {
